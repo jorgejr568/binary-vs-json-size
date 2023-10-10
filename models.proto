@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "protos.models";
+message CovidTimeSeries {
+    repeated CovidTimeSeriesEntry entries = 1;
+}
+
+message CovidTimeSeriesEntry {
+    string date = 1;
+    int32 confirmed = 2;
+    int32 deaths = 3;
+    int32 recovered = 4;
+}
